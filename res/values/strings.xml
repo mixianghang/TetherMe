@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TetherMe</string>
+    <string name="hotspot">HotSpot Name</string>
+    <string name="password">Enter Password</string>
+    <string name="create">Create Hotspot</string>
+    <string name="wifi">Wifi Networks</string>
+    <string name="scanning">Scanning For Wifi Networks</string>
+    <string name="wifi_security">Enter Wifi Security Password</string>
+    <string name="ssid">SSID</string>
+    <string name="ssid_password">Password</string>
+    <string name="connect">Wifi Connect </string>
+    <string name="connect_label">Connect</string>
+    <string name="hotspot_config">Hotspot Settings</string>
+    <string name="intro">Greetings! Thanks for installing TetherMe!\nTetherme provides shortcuts for a  number of features that are accessible right from your homescreen.
+        \nTo add the widget to homescreen choose an empty space for your widget and Long press.Then select Tetherme from the menu that appears.Voila!</string>
+</resources>

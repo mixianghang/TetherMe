@@ -1,0 +1,194 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.widget.tetherme"
+    android:versionCode="1400"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.example.USB_PERMISSION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    
+    <application android:label="@string/app_name"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme">
+        
+        <receiver android:name="TetherMe" 
+            android:exported="false"
+            >
+    	<intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        </intent-filter>
+    	<meta-data android:name="android.appwidget.provider"
+               android:resource="@xml/widget_info" />
+		</receiver>
+
+        <receiver 
+            android:name=".StartTether"
+            android:label="@string/app_name"
+            >
+        </receiver>
+        
+        <receiver 
+            android:name=".StartData"
+            android:label="@string/app_name"
+            ></receiver>
+        
+         <receiver 
+            android:name=".SwitchHotspot"
+            android:label="@string/app_name"
+            ></receiver>
+         
+          <receiver 
+            android:name=".SwitchOnWifi"
+            android:label="@string/app_name"
+            ></receiver> 
+         
+        <activity
+            android:name=".StartHotspot"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+            android:screenOrientation="portrait"
+            ></activity>
+        
+        <receiver 
+            android:name=".StartBluetooth"
+            android:label="@string/app_name"
+            ></receiver> 
+        
+       <receiver 
+            android:name=".FlightModeToggle"
+            android:label="@string/app_name"
+            ></receiver> 
+        
+        <receiver 
+            android:name=".SoundToggle"
+            android:label="@string/app_name"
+            ></receiver> 
+       
+      <receiver
+         android:name=".DataReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+        >
+        
+        <intent-filter android:priority="1000">
+        	<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>    
+        </intent-filter>    
+        
+        </receiver>
+       
+        <receiver
+         android:name=".TetherReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        
+        <intent-filter android:priority="1000">
+        	<action android:name="android.net.conn.TETHER_STATE_CHANGED"/>    
+        </intent-filter>    
+        
+        </receiver> 
+        
+     	<receiver
+         android:name=".HotspotReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        <intent-filter>
+        	<action android:name="android.net.conn.TETHER_STATE_CHANGED"/>    
+        </intent-filter>    
+        
+        </receiver>  
+        
+     	<receiver
+         android:name=".WifiReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        
+        <intent-filter android:priority="1000">
+        	<action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+        </intent-filter>    
+        
+        </receiver>  
+        
+     	<receiver
+         android:name=".BluetoothReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        
+        <intent-filter android:priority="1000">
+        	<action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+        </intent-filter>    
+        
+        </receiver>  
+        
+     	<receiver
+         android:name=".FlightModeReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        
+        <intent-filter android:priority="1000">
+        	<action android:name="android.intent.action.AIRPLANE_MODE" />
+        </intent-filter>    
+        
+        </receiver>  
+        
+     	<receiver
+         android:name=".SoundReceiver"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        
+        <intent-filter android:priority="1000">
+        	<action android:name="android.media.RINGER_MODE_CHANGED" />
+        </intent-filter>    
+        
+        </receiver>  
+        
+     	
+        <service
+         android:name=".widgetUpdateService"
+         android:label="@string/app_name"
+         android:exported="false"
+         >
+        
+        </service>  
+        
+        <activity
+         android:name=".ConnectToWifi"
+         android:label="@string/app_name"
+         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+         android:screenOrientation="portrait"
+            >
+            
+        </activity>
+        
+        <activity
+         android:name=".MainActivity"
+         android:label="@string/app_name"
+         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+         android:screenOrientation="portrait"
+            >
+         <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+         </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>

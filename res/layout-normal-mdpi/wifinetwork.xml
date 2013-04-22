@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+    <RelativeLayout
+         android:id="@+id/toprelative"
+         android:layout_width="wrap_content"
+         android:layout_height="47dp"
+         android:orientation="vertical" >
+
+         <ImageView
+             android:id="@+id/headnew1"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentTop="true"
+             android:background="@drawable/headnew1"
+             android:contentDescription="@string/wifi"
+              />
+
+         <TextView
+             android:id="@+id/wifi_label"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="20dp"
+             android:text="@string/wifi"
+             android:textColor="#ffffff"
+             android:textSize="20sp" />
+
+         </RelativeLayout>
+     
+    <ListView
+        android:id="@+id/listView_wifi"
+        android:layout_below="@+id/toprelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#C0C0C0"
+    	android:dividerHeight="1dp"
+    	android:cacheColorHint="#00000000"
+        android:textFilterEnabled="true"
+        android:background="@drawable/customsearchlistbox"
+        android:visibility="gone"
+         >
+    </ListView>
+    
+	
+	<TextView 
+	    android:id="@+id/textView_progress"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_centerHorizontal="true"
+	    android:textColor="#000000"
+	    android:text="@string/scanning"
+	    />
+
+	<ProgressBar
+	    android:id="@+id/progress"
+	    android:layout_width="25dp"
+	    android:layout_height="25dp"
+	    android:layout_above="@+id/textView_progress"
+	    android:layout_marginBottom="10dp"
+	    android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+
+     <RelativeLayout
+         android:id="@+id/toprelative"
+         android:layout_width="wrap_content"
+         android:layout_height="47dp"
+         android:orientation="vertical" >
+
+         <ImageView
+             android:id="@+id/headnew1"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentTop="true"
+             android:background="@drawable/headnew1"
+             android:contentDescription="@string/wifi"
+              />
+
+         <TextView
+             android:id="@+id/atconnects_label"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="20dp"
+             android:text="@string/hotspot_config"
+             android:textColor="#ffffff"
+             android:textSize="20sp" />
+
+         </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/textView_hotspotname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toprelative"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:textSize="16sp"
+        android:text="@string/hotspot" />
+
+    <EditText
+        android:id="@+id/editText_hotspotname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_hotspotname" 
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_hotspotname"
+        android:layout_below="@+id/editText_hotspotname"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textView_password"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/button_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/create"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:background="@drawable/custom_relative_selector"
+         />
+
+</RelativeLayout>

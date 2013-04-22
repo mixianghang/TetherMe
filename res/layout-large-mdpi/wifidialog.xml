@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+         android:id="@+id/toprelative"
+         android:layout_width="wrap_content"
+         android:layout_height="70dp"
+         android:orientation="vertical" >
+
+         <ImageView
+             android:id="@+id/headnew1"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentTop="true"
+             android:background="@drawable/headnew1"
+             android:contentDescription="@string/wifi"
+              />
+
+         <TextView
+             android:id="@+id/atconnects_label"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="20dp"
+             android:text="@string/connect_label"
+             android:textColor="#ffffff"
+             android:textSize="35sp" />
+
+         </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_Security"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toprelative"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:textSize="30sp"
+        android:text="@string/wifi_security" />
+
+    <TextView
+        android:id="@+id/textView_SSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_Security"
+        android:layout_below="@+id/textView_Security"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:text="@string/ssid" />
+
+    <TextView
+        android:id="@+id/textView_SSID_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_SSID"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/textView_SSID"
+        android:textSize="30sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView_Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_SSID"
+        android:layout_below="@+id/textView_SSID_Name"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:text="@string/ssid_password" />
+
+    <TextView
+        android:id="@+id/button_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Password"
+        android:layout_marginTop="75dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_relative_selector"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:text="@string/connect" />
+    
+    <EditText
+        android:id="@+id/editText_ssid_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_SSID_Name"
+        android:layout_alignBaseline="@+id/textView_Password"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:textSize="30sp"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    
+
+</RelativeLayout>

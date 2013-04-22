@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/myshape" >
+
+    <ImageView
+        android:id="@+id/button_threeg"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/app_name"
+        android:layout_alignParentLeft="true"
+        android:padding="10dp"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/threegicon" />
+
+    <ImageView
+        android:id="@+id/button_tether"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/button_threeg"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/tether" />
+
+    <ImageView
+        android:id="@+id/button_hotspot"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/app_name"
+        android:layout_toRightOf="@+id/button_tether"
+        android:padding="10dp"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/hotspot" />
+    
+    <ImageView
+        android:id="@+id/button_wifi"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/button_hotspot"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/wifi" />
+    
+    <ImageView
+        android:id="@+id/button_settings"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/button_hotspot"
+        android:layout_below="@+id/button_wifi"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/settings" />
+
+    <ImageView
+        android:id="@+id/button_bluetooth"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:padding="10dp"
+        android:contentDescription="@string/app_name"
+        android:layout_alignRight="@+id/button_tether"
+        android:layout_below="@+id/button_tether"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/bluetooth" />
+
+    <ImageView
+        android:id="@+id/button_flightmode"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:layout_alignBottom="@+id/button_bluetooth"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/flightmode" />
+
+    <ImageView
+        android:id="@+id/button_sound"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:padding="10dp"
+        android:contentDescription="@string/app_name"
+        android:layout_alignLeft="@+id/button_hotspot"
+        android:layout_below="@+id/button_hotspot"
+        android:background="@drawable/custombuttonselection"
+        android:src="@drawable/sound_off" />
+
+</RelativeLayout> 
